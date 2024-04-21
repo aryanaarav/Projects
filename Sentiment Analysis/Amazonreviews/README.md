@@ -36,7 +36,7 @@ PNP Score
 * Increasing scores hace decreasing negative values
 
 Comparisions
-![alt text]()
+![alt text](Sentiment Analysis/Amazonreviews/ss/Comparision.jpg)
 * Shows vigorous comparisions in larger areas of interest
 
 ## Documentation
