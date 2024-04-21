@@ -18,7 +18,9 @@ You may need to install the following:
 
 ```bash
   pip install ipywidgets
-  or in conda
+```
+or in conda
+```bash
   conda install -c conda-forge ipywidgets
 ```
     
