@@ -1,8 +1,8 @@
-Transformers allows us to easily leverage a pre-trained BERT neural network to directly inculcate this model to get results without bothering to build it from scratch.
+I am gonna easily leverage a pre-trained BERT neural network to directly inculcate this model to get results without bothering to build it from scratch.
 
 In this notebook I go through how to get up and running with Hugging Face Transformers and BERT to be able to calculate sentiment. I'll run the model using a single prompt but also leverage BeautifulSoup to scrape reviews from Yelp to be able to calculate sentiment on a larger scale. 
 
-In this notebook I'll: 
+In this notebook I will: 
 1. Install Transformers
 2. Perform Sentiment Scoring using BERT and Python
 3. Scrape reviews from Yelp and Calculate their Sentiment
