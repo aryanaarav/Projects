@@ -26,16 +26,19 @@ or in conda
     
 ## Demo
 Compound Score
+
 ![alt text](https://github.com/aryanaarav/aa_repo/blob/master/Sentiment%20Analysis/Amazonreviews/ss/CompoundScore.jpg)
 * Larger scores have larger compound values as we would expect
 
 PNP Score
+
 ![alt text](https://github.com/aryanaarav/aa_repo/blob/master/Sentiment%20Analysis/Amazonreviews/ss/PNPscore.jpg)
 * Increasing scores have increasing positive values
 * All scores are somehow the same neutral values
 * Increasing scores hace decreasing negative values
 
 Comparisions
+
 ![alt text](https://github.com/aryanaarav/aa_repo/blob/master/Sentiment%20Analysis/Amazonreviews/ss/Comparision.jpg)
 * Shows vigorous comparisions in larger areas of interest
 
