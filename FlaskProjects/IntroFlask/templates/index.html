@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Home</title>
+{% endblock %}
+
+{% block body %}
+    <h1>Task Master</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Date Created</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td>{{ task.date_created.strftime('%Y-%m-%d') }}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a> | <a href="#">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form method="POST">
+        <input type="text" name="content" placeholder="Enter Task">
+        <input type="submit" value="Add Task">
+    </form>
+{% endblock %}
