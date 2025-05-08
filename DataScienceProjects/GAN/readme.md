@@ -9,7 +9,7 @@ This section includes the necessary libraries and modules required for the proje
 This section is responsible for loading the MNIST dataset, which contains handwritten digits. It includes functions to preprocess the data, such as normalization and reshaping, to prepare it for training the GAN.
 
 ``` Model Building```
-This section defines the architecture of the Generator and Discriminator models. The Generator creates fake images from random noise, while the Discriminator distinguishes between real and fake images. The models are built using Keras and TensorFlow.
+This section defines the architecture of the Generator and Discriminator models. The Generator creates fake images from random noise, while the Discriminator distinguishes between real and fake images. The models are built using Pytorch.
 
 ``` Training Loop```
 This section contains the main training loop for the GAN. It includes functions to train the Generator and Discriminator, as well as to generate and save images during training. The training process involves alternating between training the Discriminator and the Generator.
