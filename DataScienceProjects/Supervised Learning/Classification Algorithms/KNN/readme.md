@@ -1,6 +1,6 @@
 # K-Nearest Neighbors (KNN) Algorithm
 
-This project demonstrates the implementation and evaluation of the K-Nearest Neighbors (KNN) algorithm for supervised machine learning, as part of the IBM Data Science Capstone Project.
+This project demonstrates the implementation and evaluation of the K-Nearest Neighbors (KNN) algorithm for supervised machine learning.
 
 ## Overview
 
@@ -55,7 +55,7 @@ print("Test set accuracy:", test_accuracy)
 ## File Location
 
 The relevant code and implementation are found in:
-- `IBM DATA SCIENCE CAPSTONE PROJECT/ML predictions.ipynb`
+- `DataScienceProjects/Supervised Learning/Classification Algorithms/KNN/KNNalgorithm.ipynb`
 
 ## References
 
