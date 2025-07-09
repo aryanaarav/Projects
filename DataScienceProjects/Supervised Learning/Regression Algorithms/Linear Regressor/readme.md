@@ -1,19 +1,20 @@
-# 📊 [Project Title: Algorithm Name on Dataset Name]
+# 📊 [Project Title: Linear Regression on Boston Housing Data]
 
 ## 🚀 Overview
-This project demonstrates the implementation of **Linear Regression Algorithm** using the **Boston Housing Dataset**. The goal is to [briefly describe the objective – e.g., classify, predict, cluster, etc.].
+This project demonstrates the implementation of **Linear Regression Algorithm** using the **Boston Housing Dataset**. The goal is to predict the median value of owner-occupied homes in thousands of dollars based on various features.
 
 ---
 
 ## 🧠 Algorithm Used
-- **[Algorithm Name]**
-- Key Idea: [1-2 line explanation of how it works]
+- **Linear Regression**
+- Key Idea: To model the relationship between a dependent variable (median home value) and one or more independent variables (features like number of rooms, crime rate, etc.) using a linear equation.
 
 ---
 
 ## 📁 Dataset
-- **Source**: [Kaggle / UCI / Custom]
-- **Description**: [1-2 lines about dataset – e.g., 30 features of breast cancer samples]
+- **Source**: sklearn.datasets
+- **Name**: Boston Housing Dataset
+- **Description**: A dataset containing information about housing in Boston, including features such as crime rate, number of rooms, and distance to employment centers, along with the target variable which is the median value of homes.
 - **Size**: [# of rows] rows × [# of columns] columns
 
 ---
