@@ -1,4 +1,4 @@
-# 📊 [Project Title: Linear Regression on Boston Housing Data]
+# 📊 Project Title: Linear Regression on Boston Housing Data
 
 ## 🚀 Overview
 This project demonstrates the implementation of **Linear Regression Algorithm** using the **Boston Housing Dataset**. The goal is to predict the median value of owner-occupied homes in thousands of dollars based on various features.
