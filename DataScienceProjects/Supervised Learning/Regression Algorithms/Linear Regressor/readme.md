@@ -20,9 +20,9 @@ This project demonstrates the implementation of **Linear Regression Algorithm** 
 ---
 
 ## ⚙️ Workflow
-📦 Load Data
-🧹 Preprocess (missing values, encoding, scaling)
-📊 EDA (Exploratory Data Analysis)
+📦 Load Data 
+🧹 Preprocess (missing values, encoding, scaling) 
+📊 EDA (Exploratory Data Analysis) 
 🧠 Train-Test Split
 🤖 Training
 📈 Evaluate (Accuracy / MAE / RMSE / Confusion Matrix / AUC)
