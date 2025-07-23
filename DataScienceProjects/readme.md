@@ -10,14 +10,17 @@ Each project in this folder is self-contained with its own README and necessary 
 
 ```
 DataScienceProjects/
-│
-├── Project1/
-│   ├── README.md
-│   ├── data/
-│   ├── notebooks/
-│   └── src/
-├── Project2/
-│   └── ...
+├── Supervised
+|  ├── Project1/
+|  │   ├── README.md
+|  │   ├── data/
+|  │   ├── notebooks/
+|  │   └── src/
+|  ├── Project2/
+|  │   └── ...
+|  └── ...
+├── Unsupervised
+|
 └── ...
 ```
 
