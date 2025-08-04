@@ -1,0 +1,4 @@
+Algorithm,AvgRewardLast100,ConvergenceEpisode
+DQN,121.47,Not Converged
+REINFORCE,375.82,341
+A2C,109.39,195
