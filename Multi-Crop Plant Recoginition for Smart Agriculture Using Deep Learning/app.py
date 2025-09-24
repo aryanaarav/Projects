@@ -3,6 +3,12 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 import matplotlib.cm as cm
+import av
+import openai
+
+openai.api_key = "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"
+
+av.logging.set_level(av.logging.ERROR)
 
 # Load your trained model
 model = tf.keras.models.load_model('final_trained_model.keras')
@@ -158,15 +164,38 @@ def preprocess_image(img):
     arr = np.expand_dims(arr, 0)
     return arr
 
+def get_crop_advice(crop_name):
+    prompt = f"Give agronomic care tips for the crop: {crop_name}"
+    response = openai.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": prompt}]
+    )
+    return response.choices[0].message.content
+
+#
+# +++ THIS IS THE NEW, CORRECTED CODE +++
+#
+#
+# +++ THIS IS THE FINAL, CORRECTED CODE +++
+#
 def make_gradcam_heatmap(img_array, model, last_conv_layer_name):
     grad_model = tf.keras.models.Model(
         [model.inputs], [model.get_layer(last_conv_layer_name).output, model.output]
     )
+
     with tf.GradientTape() as tape:
+        # grad_model returns a list of two items. The second item (preds)
+        # might ALSO be a list, e.g., [<Tensor>].
         conv_outputs, preds = grad_model(img_array)
-        pred_index = tf.argmax(preds[0])
-        pred_index = pred_index.numpy().item()  # <-- FIXED HERE
-        class_channel = preds[0][pred_index]
+
+        # Get the actual prediction tensor out of the list
+        # This is the key fix!
+        preds_tensor = preds[0]
+
+        # Now use the tensor for the rest of the calculations
+        pred_index = np.argmax(preds_tensor)
+        class_channel = preds_tensor[:, pred_index]
+
     grads = tape.gradient(class_channel, conv_outputs)
     pooled_grads = tf.reduce_mean(grads, axis=(0, 1, 2))
     conv_outputs = conv_outputs[0]
@@ -180,7 +209,7 @@ st.title("Multi-Crop Plant Recognition System")
 uploaded_file = st.file_uploader("Upload a plant image:", type=["jpg", "jpeg", "png"])
 if uploaded_file:
     img = Image.open(uploaded_file).convert('RGB')
-    st.image(img, caption='Uploaded Crop Leaf', use_column_width=True)
+    st.image(img, caption='Uploaded Crop Leaf', use_container_width=True)
     arr = preprocess_image(img)
     preds = model.predict(arr)
     idx = np.argmax(preds)
@@ -190,4 +219,8 @@ if uploaded_file:
     if st.button("Show Explainability"):
         heatmap = make_gradcam_heatmap(arr, model, last_conv_layer_name='Conv_1')
         heatmap_img = cm.jet(heatmap)[..., :3]  # Convert to RGB
-        st.image(heatmap_img, caption="Grad-CAM Heatmap", use_column_width=True)
+        st.image(heatmap_img, caption="Grad-CAM Heatmap", use_container_width=True)
+        
+    if st.button("Get Agronomic Advice"):
+        tips = get_crop_advice(CLASS_LABELS[idx])
+        st.write(tips)
